@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flooring</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .note {
+            background: #e8f0fe;
+            padding: 10px;
+            margin-top: 10px;
+            border-left: 4px solid #4285f4;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 48%;
+            border-radius: 8px;
+        }
+        .calculator {
+            margin-top: 20px;
+            background: #fefefe;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Flooring</h1>
+    <p>Hardwood, laminate, vinyl or tile—we’ll install the perfect floor.</p>
+    <div class="note"><strong>Price Note:</strong> $6 per square foot.</div>
+
+    <div class="calculator">
+        <label for="sqft">Enter square footage:</label>
+        <input type="number" id="sqft" oninput="calculate()" />
+        <p id="result"></p>
+    </div>
+    <script>
+        function calculate() {
+            var sqft = document.getElementById('sqft').value;
+            if (!sqft || sqft < 0) {
+                document.getElementById('result').innerText = "";
+                return;
+            }
+            var rate = {
+                "roof-replacement.html": 5,
+                "siding-replacement.html": 6,
+                "flooring.html": 6,
+                "carpet.html": 2.5,
+                "deck.html": 50,
+                "sunroom.html": 180,
+                "house-additions.html": 180
+            }["flooring.html"];
+            var base = ("flooring.html" === "roof-replacement.html") ? 500 : 0;
+            var total = base + (sqft * rate);
+            document.getElementById('result').innerText = "Estimated cost: $" + total.toFixed(2);
+        }
+    </script>
+</div></body></html>

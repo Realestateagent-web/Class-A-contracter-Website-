@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NWP - Class A Contractor</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&amp;family=Playfair+Display&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1faee;
+      color: #1d3557;
+    }
+    header {
+      padding: 10px;
+    }
+    .hero {
+      padding: 40px 20px;
+      background: #a8dadc;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 44px;
+      font-family: 'Playfair Display', serif;
+      color: #e63946;
+      margin-bottom: 20px;
+      border-bottom: 4px solid #e63946;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    .hero-img-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .hero-img-wrapper img {
+      width: 90%;
+      height: auto;
+      border-radius: 12px;
+      transition: transform 0.4s ease;
+    }
+    .hero-img-wrapper img:hover {
+      transform: scale(1.03);
+    }
+    .intro {
+      max-width: 900px;
+      margin: 30px auto 10px auto;
+      padding: 0 20px;
+      font-size: 22px;
+      text-align: center;
+      font-weight: 500;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .service-box {
+      background: white;
+      padding: 20px;
+      width: 220px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+    .service-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .service-box a {
+      display: block;
+      margin-top: 10px;
+      padding: 10px;
+      background: white;
+      color: #e63946;
+      border: 2px solid #e63946;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .service-box a:hover {
+      background: #e63946;
+      color: white;
+      transform: scale(1.05);
+    }
+    .service-box.disabled a {
+      border-color: gray;
+      color: gray;
+      pointer-events: none;
+    }
+    .main-focus-box {
+      width: 90%;
+      margin: 40px auto;
+      background: #e0f7fa;
+      border: 2px solid #e63946;
+      border-radius: 10px;
+      text-align: center;
+      padding: 30px;
+    }
+    .main-focus-box h3 {
+      font-size: 28px;
+      color: #e63946;
+      margin-bottom: 10px;
+    }
+    .partner-program {
+      max-width: 900px;
+      margin: 20px auto 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .partner-program h2 {
+      color: #0077cc;
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+    .partner-program ul {
+      padding-left: 20px;
+      font-size: 18px;
+    }
+    .partner-program li {
+      margin-bottom: 12px;
+    }
+    footer {
+      background: #1d3557;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+<header></header>
+<section class="hero">
+<h2 style="font-size: 48px; font-weight: bold; color: black; font-family: 'Resolve', sans-serif; border-bottom: none;">NWP - Your Reliable Class A Contractor</h2>
+
+</section>
+<section class="intro">
+<p>At NWP, we specialize in transforming homes with precision and care. From plumbing repairs to full-scale kitchen and bathroom remodels, our Class A licensed team delivers top-tier craftsmanship, every step of the way. No matter your project, we’re here to bring your vision to life—on time, and with zero hassle.</p>
+</section>
+<section class="services">
+<div class="service-box"><div class="service-icon"><i class="fa-solid fa-wrench"></i></div><h3>Plumbing</h3><a href="plumbing.html">View Service</a></div>
+<div class="service-box disabled"><div class="service-icon"><i class="fa-solid fa-temperature-low"></i></div><h3>HVAC</h3><a href="#">View Service</a></div>
+<div class="service-box"><div class="service-icon"><i class="fa-solid fa-kitchen-set"></i></div><h3>Kitchen Remodel</h3><a href="kitchen-remodel.html">View Service</a></div>
+<div class="service-box"><div class="service-icon"><i class="fa-solid fa-bath"></i></div><h3>Bathroom Remodel</h3><a href="bathroom-remodel.html">View Service</a></div>
+<div class="service-box"><div class="service-icon"><i class="fa-solid fa-house-chimney"></i></div><h3>Roof Replacement</h3><a href="roof-replacement.html">View Service</a></div>
+<div class="service-box"><div class="service-icon"><i class="fa-solid fa-border-all"></i></div><h3>Siding Replacement</h3><a href="siding-replacement.html">View Service</a></div>
+<div class="service-box"><div class="service-icon"><i class="fa-solid fa-ruler-combined"></i></div><h3>Flooring</h3><a href="flooring.html">View Service</a></div>
+<div class="service-box"><div class="service-icon"><i class="fa-solid fa-layer-group"></i></div><h3>Carpet</h3><a href="carpet.html">View Service</a></div>
+<div class="service-box"><div class="service-icon"><i class="fa-solid fa-droplet"></i></div><h3>Leak Fix</h3><a href="leak-fix.html">View Service</a></div>
+<div class="service-box"><div class="service-icon"><i class="fa-solid fa-tree"></i></div><h3>Deck</h3><a href="deck.html">View Service</a></div>
+<div class="service-box"><div class="service-icon"><i class="fa-solid fa-sun"></i></div><h3>Sunroom</h3><a href="sunroom.html">View Service</a></div>
+<div class="service-box"><div class="service-icon"><i class="fa-solid fa-house-circle-check"></i></div><h3>House Additions/Rebuild</h3><a href="house-additions.html">View Service</a></div>
+</section>
+<section class="main-focus-box">
+<h3>Partner Program - Maximize Your Home's Value</h3>
+<a class="disabled" href="#">Coming Soon</a>
+</section>
+<section class="partner-program">
+<h2>What You Get Through the Partner Program</h2>
+<ul>
+<li><strong>FREE property listing</strong> through our licensed Virginia brokerage to attract the right buyers fast.</li>
+<li>Unlock the true potential of your home with a Class A certified remodeling team.</li>
+<li>Renovate now—pay later. We cover painting, flooring, kitchens, bathrooms, and more upfront.</li>
+<li>We handle scheduling, coordination, and payments so you don’t have to.</li>
+<li>We can even help with your moving costs, rent, or mortgage while we work.</li>
+<li>We only get paid at closing—when you do.</li>
+</ul>
+</section>
+<footer>
+<p>Contact: 703-485-6378 | wangyezuo</p>
+</footer>
+</body>
+</html>
