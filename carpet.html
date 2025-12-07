@@ -16,6 +16,7 @@
             background: white;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
         }
         h1 {
             color: #2c3e50;
@@ -26,54 +27,70 @@
             margin-top: 10px;
             border-left: 4px solid #4285f4;
         }
-        .gallery {
+
+        /* Single Image Style */
+        .image-wrapper {
+            margin-top: 20px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
+            justify-content: center;
         }
-        .gallery img {
-            width: 48%;
-            border-radius: 8px;
+        .image-wrapper img {
+            width: 70%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+        .image-wrapper img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        }
+
         .calculator {
-            margin-top: 20px;
-            background: #fefefe;
+            margin-top: 30px;
+            background: #fafafa;
             padding: 15px;
             border: 1px solid #ddd;
+            border-radius: 6px;
         }
     </style>
 </head>
 <body>
+
 <div class="container">
     <h1>Carpet</h1>
-    <p>Comfortable and stylish carpet installations for your interior.</p>
-    <div class="note"><strong>Price Note:</strong> $2.50 per square foot.</div>
+    <p>Comfortable and stylish carpet installations designed to enhance your home's interior with warmth and texture.</p>
+    
+    <div class="note">
+        <strong>Price Note:</strong> $2.50 per square foot.
+    </div>
 
+    <!-- Real Carpet Photo -->
+    <div class="image-wrapper">
+        <img src="./carpet 1.webp" alt="Carpet installation example">
+    </div>
+
+    <!-- Calculator -->
     <div class="calculator">
+        <h3>Carpet Cost Calculator</h3>
         <label for="sqft">Enter square footage:</label>
         <input type="number" id="sqft" oninput="calculate()" />
         <p id="result"></p>
     </div>
+
     <script>
         function calculate() {
-            var sqft = document.getElementById('sqft').value;
+            let sqft = document.getElementById('sqft').value;
             if (!sqft || sqft < 0) {
                 document.getElementById('result').innerText = "";
                 return;
             }
-            var rate = {
-                "roof-replacement.html": 5,
-                "siding-replacement.html": 6,
-                "flooring.html": 6,
-                "carpet.html": 2.5,
-                "deck.html": 50,
-                "sunroom.html": 180,
-                "house-additions.html": 180
-            }["carpet.html"];
-            var base = ("carpet.html" === "roof-replacement.html") ? 500 : 0;
-            var total = base + (sqft * rate);
+            let rate = 2.5;
+            let total = sqft * rate;
             document.getElementById('result').innerText = "Estimated cost: $" + total.toFixed(2);
         }
     </script>
-</div></body></html>
+
+</div>
+
+</body>
+</html>
